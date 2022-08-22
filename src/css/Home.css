@@ -3,16 +3,23 @@
 
 
 *{
-    font-family: 'Poppins', sans-serif;
-    margin: 0 0.7rem;
-    background-color: #00302E;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+.home-body{
+    background-color: #00302E;
+    font-family: 'Poppins', sans-serif;
+}
+.main-container{
+    padding: 4rem;
+}
 
 nav{
     display: flex;
     justify-content: space-between;
-    margin: 2rem 0;
+    /* margin: 2rem 0; */
 }
 
 .brand{
@@ -139,6 +146,9 @@ header{
     margin: 0;
     margin-top: 3rem;
 }
+.special-meal {
+    padding: 0 5rem;
+}
 
 .special-meal img{
     height: 13rem;
@@ -174,7 +184,8 @@ header{
     display: flex;
     margin-top: 10rem;
     align-items: center;
-    justify-content: center;
+    padding: 0 4rem;
+    justify-content: space-between;
     
 }
 .mailist-left{
@@ -207,7 +218,27 @@ header{
     font-weight: 400;
 }
 
-footer{
-    background: #0B0D17;
-    margin: 0 !important;
+#footer{
+    background-color: #0B0D17;
+    display: flex;
+    flex-direction: column;
+    color: #EEEFF4;
+    
+}
+
+.footer-top{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.footer-header{
+    font-weight: 500;
+}
+
+.items-container{
+    
 }
