@@ -6,6 +6,10 @@ import googleplayBadge from "../images/GooglePlayBadge.svg";
 import burger from "../images/burger.png";
 import spag from "../images/spag.png";
 import meatBalls from "../images/meat-balls.png";
+import social1 from "../images/Social-Icons.svg";
+import social2 from "../images/Social-Icons-1.svg";
+import social3 from "../images/Social-Icons-2.svg";
+
 import { Link } from "react-router-dom";
 import "../css/Home.css";
 
@@ -162,7 +166,11 @@ const Home = () => {
         </div>
         <div className="footer-bottom">
           <p>© 2021 LILIES, All rights reserved</p>
-          <div className="socials"></div>
+          <div className="socials">
+            <img src={social1} alt="instagram" className="soial-icon" />
+            <img src={social2} alt="twitter" className="soial-icon" />
+            <img src={social3} alt="youtube" className="soial-icon" />
+          </div>
         </div>
       </footer>
     </div>
