@@ -1,0 +1,31 @@
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidebar {
+    background: rgba(251, 251, 251, 1);
+    padding: 6rem 3rem;
+}
+
+.brand p {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.brand{
+        margin: 2rem 0;
+}
+
+.nav-items ul {
+    list-style: none;
+}
+
+.nav-item{
+    width: 100%;
+    padding: 2rem 0;
+}

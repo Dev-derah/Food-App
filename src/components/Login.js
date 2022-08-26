@@ -1,8 +1,24 @@
 import React from 'react'
-import FormTemplate from './FormTemplate'
+import "../css/Form.css"
 
 export const Login = () => {
   return (
-    <FormTemplate/>
-  )
+    <div>
+      <main className='form-page'>
+        <div className="img-section" id='login'></div>
+        <div className="form-section">
+          <h3>Welcome Back!</h3>
+          <form>
+            <input placeholder="Your Email address"></input>
+            <input placeholder="Your Password"></input>
+            <button>Login</button>
+          </form>
+          <div className="form-footer">
+            <p>Create an account</p>
+            <p>Forgot Passoword</p>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
 }
