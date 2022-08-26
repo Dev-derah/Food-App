@@ -9,7 +9,7 @@
 
 .sidebar {
     background: rgba(251, 251, 251, 1);
-    padding: 6rem 3rem;
+    padding: 3rem 1rem;
 }
 
 .brand p {
@@ -18,14 +18,23 @@
 }
 
 .brand{
-        margin: 2rem 0;
+    margin: 2rem 0;
+    padding-bottom: 4rem;
+    gap: 1rem;
+    margin-left: 2rem;
 }
 
 .nav-items ul {
     list-style: none;
 }
 
+.home-nav {
+    background-color: #EFEFEF;
+    border-radius: 5px;
+}
 .nav-item{
     width: 100%;
-    padding: 2rem 0;
+    padding: 0.7rem 0.5rem;
+        display: flex;
+        gap: 1rem;
 }
