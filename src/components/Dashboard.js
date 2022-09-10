@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import "../css/Dashboard.css";
 import logo from "../images/logo.svg";
 import homeIcon from "../images/home.svg";
@@ -10,43 +10,61 @@ import FoodCard from "./FoodCard";
 import burger from "../images/burger.png";
 import spag from "../images/spag.png";
 import meatBalls from "../images/meat-balls.png";
+import Modal from "./Modal";
+
 
 function Dashboard() {
+  const [OpenModal, setOpenModal] = useState(false);
+  const [SelectedMeal, setSelectedMeal] = useState({
+    id: "",
+    MealName: "",
+    MealPrice: "",
+    MealImage: "",
+  });
+  
+  
     const AvailableMeals = [
-      {
+        {
+        id: "1",
         MealName: "Beef Burger",
         MealDescription: "The in-house pasta and chicken by chef Moose",
-        MealPrice: "N 1,000.00",
+        MealPrice: " 1000.00",
         MealImage: burger,
       },
-      {
+        {
+          id:"2",
         MealName: "Stir Fry Pasta",
         MealDescription: "The in-house pasta and chicken by chef Moose",
-        MealPrice: "N 1,000.00",
+        MealPrice: "1000.00",
         MealImage: spag,
       },
-      {
+        {
+          id:"3",
         MealName: "Meatballs",
         MealDescription: "The in-house pasta and chicken by chef Moose",
-        MealPrice: "N 1,000.00",
+        MealPrice: " 1000.00",
         MealImage: meatBalls,
       },
-      {
+        {
+          id:"4",
         MealName: "Meatballs",
         MealDescription: "The in-house pasta and chicken by chef Moose",
-        MealPrice: "N 1,000.00",
+        MealPrice: " 1000.00",
         MealImage: spag,
       },
-      {
+        {
+          id:"5",
         MealName: "Meatballs",
         MealDescription: "The in-house pasta and chicken by chef Moose",
-        MealPrice: "N 1,000.00",
-        MealImage: burger,
+        MealPrice: "1000.00",
+          MealImage: burger,
+        
       },
-      {
+        {
+          id:"6",
         MealName: "Meatballs",
         MealDescription: "The in-house pasta and chicken by chef Moose",
-        MealPrice: "N 1,000.00",
+        MealPrice: " 1000.00",
         MealImage: meatBalls,
         }
     ];
@@ -90,24 +108,33 @@ function Dashboard() {
       </div>
 
       <div className="dashboard">
+        {OpenModal && (
+          <Modal selectedMeal={SelectedMeal}>
+          </Modal>
+        )}
         <div className="dashboard-header">
           <div>
             <p>Good morning, Oghenevwede!</p>
             <p>What delicious meal are you craving today?</p>
           </div>
           <div>
-            <img src={profileImage} alt="profile-pic"/>
+            <img src={profileImage} alt="profile-pic" />
           </div>
         </div>
-              <div className="dashboard-main">
-                  
-          {AvailableMeals.map((meal, index) => {
+        <div className="dashboard-main">
+          {AvailableMeals.map((meal) => {
             return (
               <FoodCard
                 foodName={meal.MealName}
                 foodImage={meal.MealImage}
-                    foodDescription={meal.MealDescription}
-                    foodPrice={meal.MealPrice}
+                foodDescription={meal.MealDescription}
+                foodPrice={meal.MealPrice}
+                key={meal.id.toString()}
+                id={meal.id}
+                meal={meal}
+                selectedMeal={SelectedMeal}
+                setSelectedMeal={setSelectedMeal}
+                setOpenModal={(OpenModal) => setOpenModal(OpenModal)}
               />
             );
           })}
