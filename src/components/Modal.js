@@ -26,7 +26,7 @@ const Modal = (props) => {
         <div>
           <div>
             <button>+</button>
-            <h3>1</h3>
+            <p>1</p>
             <button>-</button>
           </div>
 
