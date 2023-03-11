@@ -109,8 +109,10 @@ function Dashboard() {
 
       <div className="dashboard">
         {OpenModal && (
-          <Modal selectedMeal={SelectedMeal}>
-          </Modal>
+          <Modal
+            selectedMeal={SelectedMeal}
+            setOpenModal={(OpenModal) => setOpenModal(OpenModal)}
+          ></Modal>
         )}
         <div className="dashboard-header">
           <div>

@@ -47,7 +47,7 @@ input {
     border-radius: 5px;
 }
 
-button {
+.submit-button {
     padding: 1.5rem;
     border-radius: 5px;
     border: none;
@@ -65,7 +65,7 @@ button {
     color: #00302EE8;
 }
 
-h3{
+header{
         margin-bottom: 3rem;
             color: #00302E;
             font-weight: bold;
