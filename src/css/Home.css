@@ -82,9 +82,8 @@ nav {
   color: #ffffff;
   font-size: 3rem;
 }
-.jumbotron span{
-    color: 
-#FBDDBB;
+.jumbotron span {
+  color: #fbddbb;
 }
 .header-img {
   height: 20rem;
@@ -288,7 +287,7 @@ img.soial-icon {
   .brand p {
     font-size: 1.5rem;
   }
-  .header {
+  header {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -298,44 +297,57 @@ img.soial-icon {
     height: 15rem;
     margin-right: 0;
   }
-  .header-img-container{
+  .header-img-container {
     display: flex;
     width: 100%;
     justify-content: center;
     margin-bottom: 2rem;
   }
-  .header-left{
+  .header-left {
     width: 100%;
     text-align: center;
   }
-  .jumbotron{
+  .jumbotron {
     font-size: 2rem;
   }
-  .jumbotron-subtext{
+  .jumbotron-subtext {
     display: none;
   }
-  .main-subtext{
+  .main-subtext {
     width: 100%;
   }
-  .download-btns{
+  .download-btns {
     justify-content: center;
   }
-.meals-container{
+  .meals-container {
     flex-direction: column;
-}
-.special-meal {
+  }
+  .special-meal {
     padding: 2rem 5rem;
-}
-.special-meal h3{
+  }
+  .special-meal h3 {
     margin: 0.5rem;
-}
-.mailist-section{
+  }
+  .mailist-section {
     flex-direction: column;
-        margin-top: 5rem;
-}
-.mailist-left {
+    margin-top: 5rem;
+    padding: 0;
+
+    align-items: flex-start;
+  }
+  .mailist-left {
     margin: 2rem 0;
     width: 100%;
     padding: 0;
-}
+  }
+  .mailist-subtext {
+    width: 100%;
+  }
+  .footer-bottom{
+    gap: 0;
+    justify-content: space-between;
+  }
+  .socials{
+    display: flex;
+  }
 }

@@ -36,7 +36,7 @@ const Home = () => {
       <div className="main-container">
         <nav className="navbar">
           <div className="brand">
-            <img src={logo} className="brand-logo" alt="logo" />
+            <img src={logo} className="brand-logo" alt="logo" loading="lazy" />
             <p className="brand-name">Lilies</p>
           </div>
 
@@ -96,7 +96,7 @@ const Home = () => {
               {special_meals.map((meal, index) => {
                 return (
                   <div className="special-meal">
-                    <img src={meal.meal_image} alt="food" />
+                    <img src={meal.meal_image} alt="food" loading="lazy" />
                     <h3>{meal.meal}</h3>
                     <p>{meal.meal_description}</p>
                   </div>
