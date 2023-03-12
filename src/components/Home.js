@@ -61,9 +61,11 @@ const Home = () => {
           </div>
         </nav>
         {/* header */}
-        <header>
+        <header className="header">
           <div className="header-left">
-            <h2 className="jumbotron">Order food anytime, anywhere</h2>
+            <h2 className="jumbotron">
+              Order <span>food </span>anytime, anywhere
+            </h2>
             <p className="jumbotron-subtext">
               Browse from our list of specials to place your order and have food
               delivered to you in no time. Affordable, tasty and fast!
@@ -77,7 +79,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="header-img-container">
             <img src={noodles} alt="noodles" className="header-img" />
           </div>
         </header>

@@ -16,10 +16,6 @@ const Modal = (props) => {
     
   };
 
-  function addItem() {
-    props.setOpenModal(false);
-    
-  }
   return (
     <div className="modal">
       <div className="modal__content">
