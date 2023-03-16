@@ -1,7 +1,13 @@
 import React from 'react'
+import { useNavigate,useParams } from 'react-router-dom';
 import { useState } from 'react';
+import {useDispatch} from 'react-redux'
 import "../css/Modal.css";
+import  addItem  from '../features/orderSlice';
 const Modal = (props) => {
+  const dispatch = useDispatch();
+  const {id} = useParams();
+  const navigate = useNavigate();
   const [orderAmount, setOrderAmount] = useState(0)
   function ChangeAmount(operation) {
     if(operation === "subtract" && orderAmount>0){
@@ -15,6 +21,12 @@ const Modal = (props) => {
     }
     
   };
+  
+  function handleBackClick(){
+    navigate('/dashboard');
+    props.setOpenModal(false);
+  }
+
 
   return (
     <div className="modal">
@@ -22,9 +34,9 @@ const Modal = (props) => {
         <button
           className="cancel-container"
           type="button"
-          onClick={() => props.setOpenModal(false)}
+          onClick={() => handleBackClick()}
         >
-          {"<"}Back
+          {"< "}Back
         </button>
         <img
           src={props.selectedMeal.MealImage}
@@ -64,7 +76,11 @@ const Modal = (props) => {
           <div>
             <button
               className="add-order-btn"
-              onClick={() => props.setOpenModal(false)}
+              onClick={() => dispatch(addItem({
+                id: 1,
+                name:'food',
+                price:3000
+              }))}
             >
               Add to cart
             </button>

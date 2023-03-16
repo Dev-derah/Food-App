@@ -8,6 +8,7 @@ import Profile from './components/Profile';
 import SignUp from './components/SignUp';
 import Order from "./components/Order";
 import Cart from './components/Cart'
+import Product from './components/Product';
 
 function App() {
   
@@ -16,15 +17,15 @@ function App() {
       <React.StrictMode>
         <Router>
           <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/signup" element={<SignUp />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/dashboard" element={<Dashboard />}>
-              <Route path="order" element={<Order />} />
-              <Route path="profile" element={<Profile />} />
-              <Route path="cart" element={<Cart />} />
+            <Route path="/" exact element={<Home />} />
+            <Route path="/signup" exact element={<SignUp />} />
+            <Route path="/login" exact element={<Login />} />
+            <Route path="/dashboard" exact element={<Dashboard />}>
+              <Route path="product/:id" exact element={<Product />} />
+              <Route path="order" exact element={<Order />} />
+              <Route path="profile" exact element={<Profile />} />
+              <Route path="cart" exact element={<Cart />} />
             </Route>
-            <Route path="/dashboard" element={<Profile />}></Route>
           </Routes>
         </Router>
       </React.StrictMode>

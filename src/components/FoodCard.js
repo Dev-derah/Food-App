@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function FoodCard(props) {
   // const [SelectedMeal, setSelectedMeal] = useState([])
+  const navigate = useNavigate();
  
     return (
       <div className="card-container">
@@ -14,6 +16,7 @@ function FoodCard(props) {
           <p>{props.foodPrice}</p>
           <p className="addCart-btn" onClick={(e) => {
             props.setOpenModal(true);
+            navigate(`product/${props.id}`)
             props.setSelectedMeal({
               id: props.meal.id,
               MealName: props.meal.MealName,
