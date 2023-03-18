@@ -7,22 +7,15 @@ const orderSlice = createSlice({
   name: "order",
   initialState,
   reducers: {
-    createItem:(state, action)=> {
-        state.items =action.payload;
-    },
-    addItem:(state,action)=>{
-        state.items =[...state.item,action.payload.item]
-    },
-    removeItem:(state,action)=>{
-        state.items= state.items.filter((item)=> item.id !== action.payload.id);
+    addItem(state,action){
+        state.order.push(action.payload);
+
     }
   },
 });
 
 export const {
-    createItem,
     addItem,
-    removeItem
 }=orderSlice.actions;
 
 export default orderSlice.reducer;

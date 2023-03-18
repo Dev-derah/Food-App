@@ -1,33 +1,16 @@
-import React,{useState} from "react";
 import "../css/Dashboard.css";
 import profileImage from "../images/profile-img.png"
 import FoodCard from "./FoodCard";
 import Sidebar from "./Sidebar";
-import Modal from './Modal'
 import { AvailableMeals } from "../Data/data";
+import { Outlet } from "react-router-dom";
 
 
 function Dashboard() {
-
-  const [OpenModal, setOpenModal] = useState(false);
-  const [SelectedMeal, setSelectedMeal] = useState({
-    id: "",
-    MealName: "",
-    MealPrice: "",
-    MealImage: "",
-  });
-  
-  
   return (
     <div className="dashboard-container">
-      <Sidebar/>
+      <Sidebar />
       <div className="dashboard">
-        {OpenModal && (
-          <Modal
-            selectedMeal={SelectedMeal}
-            setOpenModal={(OpenModal) => setOpenModal(OpenModal)}
-          ></Modal>
-        )}
         <div className="dashboard-header">
           <div>
             <p>Good morning, Oghenevwede!</p>
@@ -48,14 +31,12 @@ function Dashboard() {
                 key={meal.id.toString()}
                 id={meal.id}
                 meal={meal}
-                selectedMeal={SelectedMeal}
-                setSelectedMeal={setSelectedMeal}
-                setOpenModal={(OpenModal) => setOpenModal(OpenModal)}
               />
             );
           })}
         </div>
       </div>
+      <Outlet/>
     </div>
   );
 }

@@ -1,33 +1,18 @@
 import React from 'react'
-import { useNavigate,useParams } from 'react-router-dom';
-import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import {useDispatch} from 'react-redux'
-import "../css/Modal.css";
-import  addItem  from '../features/orderSlice';
+import { toggleModal } from '../features/modalSlice';
+
+
 const Modal = (props) => {
-  const dispatch = useDispatch();
-  const {id} = useParams();
+  const dispatch=useDispatch();
   const navigate = useNavigate();
-  const [orderAmount, setOrderAmount] = useState(0)
-  function ChangeAmount(operation) {
-    if(operation === "subtract" && orderAmount>0){
-      setOrderAmount(orderAmount-1)
-    }
-    else if(operation === 'add'){
-      setOrderAmount(orderAmount+1)
-    }
-    else{
-      setOrderAmount(0)
-    }
-    
-  };
+      
   
-  function handleBackClick(){
-    navigate('/dashboard');
-    props.setOpenModal(false);
-  }
-
-
+  function handleBackClick() {
+        navigate("/dashboard");
+        dispatch(toggleModal)
+      }
   return (
     <div className="modal">
       <div className="modal__content">
@@ -38,7 +23,8 @@ const Modal = (props) => {
         >
           {"< "}Back
         </button>
-        <img
+        {props.children}
+        {/* <img
           src={props.selectedMeal.MealImage}
           alt="food"
           className="modal-img"
@@ -59,6 +45,11 @@ const Modal = (props) => {
         <div className="order-details-conatiner">
           <div className="order-controls">
             <button
+              style={
+                orderAmount === 1
+                  ? { backgroundColor: "lightgrey" }
+                  : { backgroundColor: "rgb(243, 195, 149)" }
+              }
               className="control-btn subtract"
               onClick={() => ChangeAmount("subtract")}
             >
@@ -74,18 +65,11 @@ const Modal = (props) => {
           </div>
 
           <div>
-            <button
-              className="add-order-btn"
-              onClick={() => dispatch(addItem({
-                id: 1,
-                name:'food',
-                price:3000
-              }))}
-            >
+            <button className="add-order-btn" onClick={() => addToCart()}>
               Add to cart
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
