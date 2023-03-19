@@ -17,9 +17,12 @@
     align-items: center;
     position: relative;
     width: 500px;
-    /* max-width: 50%; */
     background: #fff;
     padding: 1em 2em;
+}
+
+.modal__content:has(.cart__container){
+    width: 45%;
 }
 
 .cancel-container {

@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { addProduct } from "../features/productSlice";
 
 function FoodCard(props) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const toggleModal = useSelector((state) => state);
+  // const toggleModal = useSelector((state) => state);
   return (
     <div className="card-container">
       <div className="card-top">
@@ -15,7 +14,7 @@ function FoodCard(props) {
         <p className="food-description">{props.foodDescription}</p>
       </div>
       <div className="card-bottom">
-        <p>{props.foodPrice}</p>
+        <p>N {props.foodPrice}</p>
         <p
           className="addCart-btn"
           onClick={(e) => {

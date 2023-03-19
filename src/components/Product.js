@@ -1,36 +1,35 @@
-import React from 'react'
-import Modal from './Modal'
+import React from "react";
+import Modal from "./Modal";
 import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import "../css/Modal.css";
-import { addItem } from "../features/orderSlice";
+import { addItem } from "../features/cartSlice";
 import { useSelector } from "react-redux";
 
 const Product = (props) => {
-      const toggleModal = useSelector((state) => state.modal.IsOpen);
-      const product = useSelector((state) => state.product.product);
-      const dispatch = useDispatch();
-      const { id } = useParams();
-      const navigate = useNavigate();
-      const [orderAmount, setOrderAmount] = useState(1);
+  const toggleModal = useSelector((state) => state.modal.IsOpen);
+  const product = useSelector((state) => state.product.product);
+  const dispatch = useDispatch();
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [orderAmount, setOrderAmount] = useState(1);
 
-      function ChangeAmount(operation) {
-        if (operation === "subtract" && orderAmount > 1) {
-          setOrderAmount(orderAmount - 1);
-        } else if (operation === "add") {
-          setOrderAmount(orderAmount + 1);
-        } else {
-          setOrderAmount(1);
-        }
-      }
+  function ChangeAmount(operation) {
+    if (operation === "subtract" && orderAmount > 1) {
+      setOrderAmount(orderAmount - 1);
+    } else if (operation === "add") {
+      setOrderAmount(orderAmount + 1);
+    } else {
+      setOrderAmount(1);
+    }
+  }
 
-
-      function addToCart() {
-        dispatch(addItem({ id, orderAmount }));
-        setOrderAmount(1);
-        navigate("/dashboard");
-      }
+  function addToCart() {
+    dispatch(addItem({ id, orderAmount,price:product.MealPrice }));
+    setOrderAmount(1);
+    navigate("/dashboard");
+  }
   return (
     toggleModal && (
       <Modal>
@@ -49,7 +48,7 @@ const Product = (props) => {
             <h4>10 Pcs Available</h4>
           </div>
 
-         <div className="order-details-conatiner">
+          <div className="order-details-conatiner">
             <div className="order-controls">
               <button
                 style={
@@ -76,11 +75,11 @@ const Product = (props) => {
                 Add to cart
               </button>
             </div>
-          </div> 
+          </div>
         </div>
       </Modal>
     )
   );
-}
+};
 
-export default Product
+export default Product;

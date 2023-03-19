@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import "../css/Sidebar.css";
 import logo from "../images/logo.svg";
@@ -7,7 +8,8 @@ import calenderIcon from "../images/calendar.svg";
 import userIcon from "../images/user-circle.svg";
 import vector from "../images/Vector.svg";
 const Sidebar = () => {
-      const orders = useSelector((state) => state.order.order);
+    const navigate = useNavigate()
+      const cart = useSelector((state) => state.cart.cart);
   return (
     <div className="sidebar-container">
       <div className="sidebar">
@@ -35,16 +37,16 @@ const Sidebar = () => {
               </span>
               Orders
               <span className="orders-count-container">
-                <p className="orders-count">{orders.length}</p>
+                <p className="orders-count">0</p>
               </span>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" onClick={()=>navigate('/dashboard/cart')}>
               <span className="sidebar-icon">
                 <img src={vector} alt="badge"></img>
               </span>
               Your Cart
               <span className="cart-count-container">
-                <p className=" cart-count">{orders.length}</p>
+                <p className=" cart-count">{cart.length}</p>
               </span>
             </li>
           </ul>
