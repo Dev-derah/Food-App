@@ -1,6 +1,9 @@
 import burger from "../images/burger.png";
 import spag from "../images/spag.png";
 import meatBalls from "../images/meat-balls.png";
+import noodles from "../images/noodles.png";
+import waffles from "../images/waffles.svg";
+import chickenSoup from "../images/chickenSoup.svg";
 export const AvailableMeals = [
   {
     id: "1",
@@ -25,23 +28,23 @@ export const AvailableMeals = [
   },
   {
     id: "4",
-    MealName: "Meatballs",
+    MealName: "Spicy Noodles",
     MealDescription: "The in-house pasta and chicken by chef Moose",
     MealPrice: 1030.00,
-    MealImage: spag,
+    MealImage: noodles,
   },
   {
     id: "5",
-    MealName: "Meatballs",
+    MealName: "Breakfast Waffles",
     MealDescription: "The in-house pasta and chicken by chef Moose",
     MealPrice: 3100.00,
-    MealImage: burger,
+    MealImage: waffles,
   },
   {
     id: "6",
-    MealName: "Meatballs",
+    MealName: "Chicken Soup",
     MealDescription: "The in-house pasta and chicken by chef Moose",
     MealPrice: 1240.00,
-    MealImage: meatBalls,
+    MealImage: chickenSoup,
   },
 ];

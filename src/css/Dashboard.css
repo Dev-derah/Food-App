@@ -69,7 +69,7 @@
 }
 
 .cartItem__image {
-  height: 5rem;
+  height: 4rem;
 }
 
 .table {
@@ -118,12 +118,22 @@ tr::after{
 
 .checkout__btn{
     padding: 1rem 0.5rem;
-    width: 60%;
+    width: 70%;
     border: none;
     color: rgb(243, 195, 149);
     background-color: #00302E;
     text-transform: capitalize;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: center;
+    align-items: center;
 }
+
+.checkout__btn .total__price{
+  font-size: 1.2rem;
+}
+
 .total__price{
     font-size: 1.5rem;
     font-size: bolder;
@@ -134,4 +144,8 @@ tr::after{
     justify-content: flex-end;
     align-items: center;
     gap: 2rem;
+    border-top: 0.5px solid #00302E;
+    padding-right: 3rem;
+    padding: 1rem 3rem 1rem 1rem;
+    margin-top: 1.5rem;
 }

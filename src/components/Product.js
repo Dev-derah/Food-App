@@ -4,12 +4,13 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import "../css/Modal.css";
-import { addItem } from "../features/cartSlice";
+import { addItem, updateItem } from "../features/cartSlice";
 import { useSelector } from "react-redux";
 
 const Product = (props) => {
   const toggleModal = useSelector((state) => state.modal.IsOpen);
   const product = useSelector((state) => state.product.product);
+  const cartItems = useSelector((state) => state.cart.cart);
   const dispatch = useDispatch();
   const { id } = useParams();
   const navigate = useNavigate();
@@ -26,7 +27,13 @@ const Product = (props) => {
   }
 
   function addToCart() {
-    dispatch(addItem({ id, orderAmount,price:product.MealPrice }));
+    const prevOrdered = cartItems.find((meal) => meal.id === product.id);
+    if(prevOrdered !== undefined){
+      dispatch(updateItem({ id, orderAmount, price: product.MealPrice }));
+    }
+    else{
+      dispatch(addItem({ id, orderAmount, price: product.MealPrice }));
+    }
     setOrderAmount(1);
     navigate("/dashboard");
   }

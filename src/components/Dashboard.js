@@ -13,7 +13,7 @@ function Dashboard() {
       <div className="dashboard">
         <div className="dashboard-header">
           <div>
-            <p>Good morning, Oghenevwede!</p>
+            <p>Good morning, Derah!</p>
             <p>What delicious meal are you craving today?</p>
           </div>
           <div>

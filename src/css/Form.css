@@ -24,7 +24,7 @@ main.form-page{
 .overlay{
     background-color: rgba(226, 184, 135, 0.4);
 }
-form{
+#login__form,#signup__form{
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -38,7 +38,7 @@ form{
     width: 50%;
     padding-top: 5rem;
 }
-input {
+#login__form input,#signup__form input {
     padding: 1rem;
     margin-bottom: 2rem;
     background:linear-gradient(0deg, rgba(251, 221, 187, 0.51), rgba(251, 221, 187, 0.51)),

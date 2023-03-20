@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
         <div className="img-section" id="login"></div>
         <div className="form-section">
           <h3 className="form-header">Welcome Back!</h3>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} id='login__form'>
             <input placeholder="Your Email address"></input>
             <input placeholder="Your Password"></input>
             <button className="submit-button" type="submit">Login</button>

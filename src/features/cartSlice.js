@@ -12,6 +12,13 @@ const cartSlice = createSlice({
     },
     removeItem(state,action){
       state.cart=state.cart.filter((item) => item.id !== action.payload);
+    },
+    updateItem(state,action){
+      state.cart.forEach((item)=>{
+        if(item.id === action.payload.id){
+          item.orderAmount +=action.payload.orderAmount 
+        }
+      })
     }
     
   },
@@ -20,6 +27,7 @@ const cartSlice = createSlice({
 export const {
     addItem,
     removeItem,
+    updateItem,
 }=cartSlice.actions;
 
 export default cartSlice.reducer;

@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import Modal from "./Modal";
 import { useSelector, useDispatch } from "react-redux";
 import { AvailableMeals } from "../Data/data";
 import { removeItem } from "../features/cartSlice";
 import Total from "../utils/Total";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
+  const navigate = useNavigate()
   const toggleModal = useSelector((state) => state.modal.IsOpen);
   const cartItems = useSelector((state) => state.cart.cart);
   //   const getcartItems = AvailableMeals.filter((meal) => meal.id === cartItems.id);
@@ -67,15 +69,13 @@ const Cart = () => {
                             N
                             {Number(
                               MealPrice *
-                                cartItems.find((meal) => meal.id === id)
-                                  .orderAmount
+                                cartItems.find((meal) => meal.id === id).orderAmount
                             )}
                           </p>
                         </td>
                       </tr>
                     )
                   )}
-                  <tr></tr>
                 </tbody>
               </table>
               <div className="total__container">
@@ -84,7 +84,7 @@ const Cart = () => {
               </div>
 
               <div className="checkout__btn__container">
-                <button className="checkout__btn">checkout</button>
+                <button className="checkout__btn" onClick={()=>navigate('/dashboard/checkout')}>checkout {'('} <Total/> {')'}</button>
               </div>
             </div>
           )}

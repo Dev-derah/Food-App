@@ -7,7 +7,7 @@ const SignUp = () => {
         <div className="img-section" id="signup"></div>
         <div className="form-section">
           <h3 className='form-header'>Welcome to Lilies!</h3>
-          <form>
+          <form id='signup__form'>
             <input placeholder="Your First Name"></input>
             <input placeholder="Your Email address"></input>
             <input placeholder="Your Password"></input>
