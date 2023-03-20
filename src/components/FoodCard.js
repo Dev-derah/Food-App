@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { useDispatch} from "react-redux";
-import { addProduct } from "../features/productSlice";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../Redux/features/productSlice";
 
 function FoodCard(props) {
   const navigate = useNavigate();

@@ -1,18 +1,16 @@
-import React from 'react'
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import {useDispatch} from 'react-redux'
-import { toggleModal } from '../features/modalSlice';
-
+import { useDispatch } from "react-redux";
+import { toggleModal } from "../Redux/features/modalSlice";
 
 const Modal = (props) => {
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-      
-  
+
   function handleBackClick() {
-        navigate("/dashboard");
-        dispatch(toggleModal);
-      }
+    navigate("/dashboard");
+    dispatch(toggleModal);
+  }
   return (
     <div className="modal">
       <div className="modal__content">
@@ -29,4 +27,4 @@ const Modal = (props) => {
   );
 };
 
-export default Modal
+export default Modal;

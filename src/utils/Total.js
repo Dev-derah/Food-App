@@ -9,7 +9,7 @@ const multipliedValue = cartItems.map((item)=> item.orderAmount * item.price)
     (prevValue, currentValue) => prevValue + currentValue,
     0
   );
-  return <p className="total__price">{'N ' + total}</p>;
+  return <p className="total__price">{"₦" + total}</p>;
 };
 
 export default Total;

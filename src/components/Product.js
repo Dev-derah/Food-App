@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import "../css/Modal.css";
-import { addItem, updateItem } from "../features/cartSlice";
+import { addItem, updateItem } from "../Redux/features/cartSlice";
 import { useSelector } from "react-redux";
 
 const Product = (props) => {
@@ -28,10 +28,9 @@ const Product = (props) => {
 
   function addToCart() {
     const prevOrdered = cartItems.find((meal) => meal.id === product.id);
-    if(prevOrdered !== undefined){
+    if (prevOrdered !== undefined) {
       dispatch(updateItem({ id, orderAmount, price: product.MealPrice }));
-    }
-    else{
+    } else {
       dispatch(addItem({ id, orderAmount, price: product.MealPrice }));
     }
     setOrderAmount(1);
