@@ -19,7 +19,7 @@ const Sidebar = () => {
         </div>
         <div className="nav-items">
           <ul>
-            <li className="nav-item home-nav">
+            <li className="nav-item active">
               <span className="sidebar-icon">
                 <img src={homeIcon} alt="home-Icon"></img>
               </span>

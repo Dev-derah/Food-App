@@ -12,7 +12,7 @@ const Checkout = () => {
             <input className="checkout__input" placeholder="Card Number" type={'number'}/>
             <input className="checkout__input" placeholder="Exp Date" />
             <input className="checkout__input" placeholder="CVV" type={'number'} maxLength='3' />
-            <input className="checkout__input" placeholder="Card Pin" />
+            <input className="checkout__input" placeholder="Card Pin" type={'password'} />
             <button className='makePayment__btn' type='button'>Make Payment</button>
           </form>
         </div>
