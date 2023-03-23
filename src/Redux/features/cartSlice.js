@@ -19,6 +19,9 @@ const cartSlice = createSlice({
           item.orderAmount +=action.payload.orderAmount 
         }
       })
+    },
+    clearCart(state){
+      state.cart = [];
     }
     
   },

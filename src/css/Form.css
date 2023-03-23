@@ -64,10 +64,24 @@ main.form-page{
     padding-top: 2rem;
     color: #00302EE8;
 }
+.signup__footer{
+    width: 100%;
+    justify-content: center;
+}
 
 .form-header{
         margin-bottom: 3rem;
             color: #00302E;
             font-weight: bold;
             font-size: 27px;
+}
+
+@media screen and (max-width: 480px){
+    .img-section{
+        display: none;
+    }
+    .form-section {
+        width: 100%;
+    }
+  
 }

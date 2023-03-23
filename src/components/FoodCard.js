@@ -14,7 +14,7 @@ function FoodCard(props) {
         <p className="food-description">{props.foodDescription}</p>
       </div>
       <div className="card-bottom">
-        <p>N {props.foodPrice}</p>
+        <p>₦ {props.foodPrice}</p>
         <p
           className="addCart-btn"
           onClick={(e) => {

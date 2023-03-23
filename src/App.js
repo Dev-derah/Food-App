@@ -10,6 +10,7 @@ import Order from "./components/Order";
 import Cart from './components/Cart'
 import Product from './components/Product';
 import Checkout from './components/Checkout';
+import Billing from "./components/Billing";
 
 function App() {
   
@@ -24,7 +25,8 @@ function App() {
             <Route path="/dashboard" exact element={<Dashboard />}>
               <Route path="product/:id" exact element={<Product />} />
               <Route path="order" exact element={<Order />} />
-              <Route path="checkout" exact element={<Checkout/>} />
+              <Route path="checkout" exact element={<Checkout />} />
+              <Route path="billing" exact element={<Billing />} />
               <Route path="profile" exact element={<Profile />} />
               <Route path="cart" exact element={<Cart />} />
             </Route>

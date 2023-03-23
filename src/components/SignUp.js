@@ -13,7 +13,7 @@ const SignUp = () => {
             <input placeholder="Your Password"></input>
             <button className='submit-button'>SIGN UP</button>
           </form>
-          <div className="form-footer">
+          <div className="form-footer signup__footer">
             <p>
               Already have an account. <span>LOGIN</span>
             </p>

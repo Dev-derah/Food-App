@@ -31,7 +31,10 @@ const Sidebar = () => {
               </span>
               Your Profile
             </li>
-            <li className="nav-item">
+            <li
+              className="nav-item"
+              onClick={() => navigate("/dashboard/order")}
+            >
               <span className="sidebar-icon">
                 <img src={calenderIcon} alt="calender-icon"></img>
               </span>
@@ -40,7 +43,10 @@ const Sidebar = () => {
                 <p className="orders-count">0</p>
               </span>
             </li>
-            <li className="nav-item" onClick={()=>navigate('/dashboard/cart')}>
+            <li
+              className="nav-item"
+              onClick={() => navigate("/dashboard/cart")}
+            >
               <span className="sidebar-icon">
                 <img src={vector} alt="badge"></img>
               </span>

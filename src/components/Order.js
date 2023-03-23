@@ -1,8 +1,15 @@
 import React from 'react'
+import Modal from './Modal'
 
 const Order = () => {
   return (
-    <div>Order</div>
+    <>
+    <Modal>
+      <div>
+        Orders
+      </div>
+    </Modal>
+    </>
   )
 }
 
