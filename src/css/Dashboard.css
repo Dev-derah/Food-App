@@ -75,28 +75,30 @@
 .table {
   width: 100%;
 }
-th,td,tr{
-  color: #00302E;
+th,
+td,
+tr {
+  color: #00302e;
 }
-thead{
-    font-size: 0.8rem;
+thead {
+  font-size: 0.8rem;
 }
-tr{
-    margin-bottom: 2rem !important;
+tr {
+  margin-bottom: 2rem !important;
 }
-tr::after{
+tr::after {
   height: 5rem;
   display: table-row;
-  content: '';
+  content: "";
 }
 
 .table thead {
   text-align: justify;
   padding: 1rem 0 1rem 0;
 }
-.cartItem__name{
-    font-size: 1.2rem;
-    font-weight: bold;
+.cartItem__name {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 .removeItem__container {
   display: flex;
@@ -110,43 +112,49 @@ tr::after{
   font-size: 12px;
 }
 
-.checkout__btn__container{
-    display: flex;
-    width: 100%;
-    justify-content: center;
+.checkout__btn__container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
-.checkout__btn{
-    padding: 1rem 0.5rem;
-    width: 70%;
-    border: none;
-    color: rgb(243, 195, 149);
-    background-color: #00302E;
-    text-transform: capitalize;
-    cursor: pointer;
-    display: flex;
-    font-size: 1.2rem;
-    justify-content: center;
-    align-items: center;
+.checkout__btn {
+  padding: 1rem 0.5rem;
+  width: 70%;
+  border: none;
+  color: rgb(243, 195, 149);
+  background-color: #00302e;
+  text-transform: capitalize;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.checkout__btn .total__price{
+.checkout__btn .total__price {
   font-size: 1.2rem;
 }
 
-.total__price{
-    font-size: 1.5rem;
-    font-size: bolder;
+.total__price {
+  font-size: 1.5rem;
+  font-size: bolder;
 }
-.total__container{
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 2rem;
-    border-top: 0.5px solid #00302E;
-    padding-right: 3rem;
-    padding: 1rem 3rem 1rem 1rem;
-    margin-top: 1.5rem;
+.total__container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  border-top: 0.5px solid #00302e;
+  padding-right: 3rem;
+  padding: 1rem 3rem 1rem 1rem;
+  margin-top: 1.5rem;
 }
 
+@media screen and (max-width: 480px) {
+  .modal__content:has(.cart__container) {
+    width: 100vw;
+    justify-content: center;
+  }
+}
