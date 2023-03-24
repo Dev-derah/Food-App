@@ -98,16 +98,6 @@
     font-size: 12px;
     width: 1.5rem;
   }
-  .dashboard {
-    padding: 0rem 1rem;
-  }
-
-  .dashboard-header {
-    display: none;
-  }
-  .dashboard-main {
-    grid-template-columns: 1fr;
-  }
   .card-container {
     width: 80%;
     max-width: 350px;
@@ -117,5 +107,8 @@
     position: absolute;
     bottom: 1rem;
     list-style: none;
+  }
+  .sidebar-container{
+    display: none;
   }
 }

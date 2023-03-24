@@ -2,6 +2,7 @@ import "../css/Dashboard.css";
 import profileImage from "../images/profile-img.png"
 import FoodCard from "./FoodCard";
 import Sidebar from "./Sidebar";
+import logo from "../images/logo.svg";
 import { AvailableMeals } from "../Data/data";
 import { Outlet } from "react-router-dom";
 
@@ -9,6 +10,12 @@ import { Outlet } from "react-router-dom";
 function Dashboard() {
   return (
     <div className="dashboard-container">
+      <div className="navbar-container">
+        <img src={logo} alt='lilies'/>
+        <button id="hamburger-menu">
+          <nav id="sidebar-menu"></nav>
+        </button>
+      </div>
       <Sidebar />
       <div className="dashboard">
         <div className="dashboard-header">
@@ -36,7 +43,7 @@ function Dashboard() {
           })}
         </div>
       </div>
-      <Outlet/>
+      <Outlet />
     </div>
   );
 }
