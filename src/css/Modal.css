@@ -95,3 +95,20 @@
     width: 100%;
     padding-top: 2.5rem;
 }
+
+@media screen and (max-width: 480px) {
+    .modal__content{
+        width: 100%;
+        height: 100vh;
+        padding: 0.5em 1em;
+    }
+    .modal-img{
+        height: 10rem;
+    }
+    .order-name{
+        margin-bottom: 1rem;
+    }
+    .order-description{
+        font-size: 0.8rem;
+    }
+}
