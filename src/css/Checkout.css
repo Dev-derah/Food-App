@@ -1,5 +1,5 @@
-.checkout__header{
-    margin-bottom: 1rem;
+.checkout__header {
+  margin-bottom: 1rem;
 }
 .checkout__container {
   display: flex;
@@ -15,12 +15,48 @@
   height: 80%;
   flex-direction: column;
 }
+.exp-wrapper {
+  position: relative;
+  border: 1px solid #aaa;
+  display: flex;
+  width: 100%;
+  line-height: 36px;
+  font-size: 24px;
+}
 
-.checkout__input {
+.exp-wrapper:after {
+  content: "/";
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  margin-left: -4px;
+  color: #00302e7f;
+  font-weight: lighter;
+}
+
+input.exp {
+  float: left;
+  border: 0;
+  width: 25%;
+  text-align: start;
+  outline: none;
+  appearance: none;
+  font-size: 14px;
+}
+
+.checkout__input,
+.exp-wrapper {
   padding: 1rem;
   margin-bottom: 3rem;
   border: 1px solid rgb(243, 195, 149);
+  color: #00302e;;
+  font-weight: bold;
 }
+.checkout__input::placeholder,
+.exp-wrapper::placeholder{
+  font-weight: normal;
+} 
 /* Chrome, Safari, Edge, Opera */
 .checkout__input::-webkit-outer-spin-button,
 .checkout__input::-webkit-inner-spin-button {

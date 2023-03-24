@@ -1,4 +1,6 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../images/logo.svg";
 
 const SignUp = () => {
   return (
@@ -6,22 +8,26 @@ const SignUp = () => {
       <main className="form-page">
         <div className="img-section" id="signup"></div>
         <div className="form-section">
-          <h3 className='form-header'>Welcome to Lilies!</h3>
-          <form id='signup__form'>
-            <input placeholder="Your First Name"></input>
-            <input placeholder="Your Email address"></input>
-            <input placeholder="Your Password"></input>
-            <button className='submit-button'>SIGN UP</button>
+          <img src={logo} alt="lilies" className="logo" />
+          <h3 className="form-header">Welcome to Lilies!</h3>
+          <form id="signup__form">
+            <input placeholder="Your First Name" />
+            <input placeholder="Your Email address" />
+            <input placeholder="Your Password" type="password" />
+            <button className="submit-button">SIGN UP</button>
           </form>
           <div className="form-footer signup__footer">
             <p>
-              Already have an account. <span>LOGIN</span>
+              Already have an account?
+              <Link to={"/login"}>
+                <span>LOGIN</span>
+              </Link>
             </p>
           </div>
         </div>
       </main>
     </div>
   );
-}
+};
 
-export default SignUp
+export default SignUp;

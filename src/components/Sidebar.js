@@ -1,12 +1,13 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import "../css/Sidebar.css";
 import logo from "../images/logo.svg";
 import homeIcon from "../images/home.svg";
-import calenderIcon from "../images/calendar.svg";
-import userIcon from "../images/user-circle.svg";
-import vector from "../images/Vector.svg";
+import calenderIcon from "../images/order.svg";
+import userIcon from "../images/profile.svg";
+import cartIcon from "../images/cart.svg";
+import logout from "../images/logout.svg";
 const Sidebar = () => {
     const navigate = useNavigate()
       const cart = useSelector((state) => state.cart.cart);
@@ -19,41 +20,53 @@ const Sidebar = () => {
         </div>
         <div className="nav-items">
           <ul>
-            <li className="nav-item active">
+            <NavLink
+              className={({ isActive }) => (isActive ? "active " : "nav-item")}
+              to="/dashboard"
+              end
+            >
               <span className="sidebar-icon">
-                <img src={homeIcon} alt="home-Icon"></img>
+                <img src={homeIcon} alt="home-Icon" />
               </span>
-              Dashboard
-            </li>
-            <li className="nav-item">
+              <p className="navName">Dashboard</p>
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active " : "nav-item")}
+              to="/dashboard/profile"
+            >
               <span className="sidebar-icon">
-                <img src={userIcon} alt="user-icon"></img>
+                <img src={userIcon} alt="user-icon" />
               </span>
-              Your Profile
-            </li>
-            <li
-              className="nav-item"
+              <p className="navName">Your Profile</p>
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : "nav-item")}
               onClick={() => navigate("/dashboard/order")}
+              to="/dashboard/order"
             >
               <span className="sidebar-icon">
                 <img src={calenderIcon} alt="calender-icon"></img>
               </span>
-              Orders
+              <p className="navName">Orders</p>
               <span className="orders-count-container">
                 <p className="orders-count">0</p>
               </span>
-            </li>
-            <li
-              className="nav-item"
+            </NavLink>
+            <NavLink
+              to="/dashboard/cart"
+              className={({ isActive }) => (isActive ? "active " : "nav-item")}
               onClick={() => navigate("/dashboard/cart")}
             >
               <span className="sidebar-icon">
-                <img src={vector} alt="badge"></img>
+                <img src={cartIcon} alt="badge" id="cartIcon" />
               </span>
-              Your Cart
+              <p className="navName">Your Cart</p>
               <span className="cart-count-container">
                 <p className=" cart-count">{cart.length}</p>
               </span>
+            </NavLink>
+            <li id='logout'>
+              <img src={logout} alt='logout'/>
             </li>
           </ul>
         </div>
