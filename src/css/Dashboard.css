@@ -13,7 +13,7 @@
   justify-content: space-between;
 }
 .dashboard {
-  padding: 5rem 2.5rem;
+  padding: 4rem 2.5rem;
 }
 .dashboard-main {
   display: grid;
@@ -202,7 +202,7 @@ tr::after {
     border: none;
     padding: 10px;
     margin: 20px;
-    background: linear-gradient(
+    /* background: linear-gradient(
       to bottom,
       #00302e,
       #00302e 20%,
@@ -214,7 +214,8 @@ tr::after {
       white 80%,
       #00302e 80%,
       #00302e 100%
-    );
+    ); */
+    background-color: #00eddf;
   }
 
   #hamburger-menu #sidebar-menu {

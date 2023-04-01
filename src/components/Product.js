@@ -51,7 +51,7 @@ const Product = (props) => {
           <div className="order-details-conatiner">
             <h4>N{product.MealPrice}</h4>
             <h4>10-20 Mins</h4>
-            <h4>10 Pcs Available</h4>
+            <h4>Available</h4>
           </div>
 
           <div className="order-details-conatiner">

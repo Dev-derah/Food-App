@@ -19,25 +19,21 @@ const Checkout = () => {
             <div className="exp-wrapper">
               <input
                 autoComplete="off"
-                className="exp"
+                className="exp checkout__input "
                 id="month"
                 maxLength="2"
-                pattern="[0-9]*"
                 inputMode="numerical"
                 placeholder="MM"
-                type="text"
-                data-pattern-validate
+                type="number"
               />
               <input
                 autoComplete="off"
-                className="exp"
+                className="exp checkout__input"
                 id="year"
                 maxLength="2"
-                pattern="[0-9]*"
                 inputMode="numerical"
                 placeholder="YY"
-                type="text"
-                data-pattern-validate
+                type="number"
               />
             </div>
             <input
@@ -45,11 +41,12 @@ const Checkout = () => {
               placeholder="CVV"
               inputMode="numerical"
               maxLength="3"
+              type='number'
             />
             <input
               className="checkout__input"
               placeholder="Card Pin"
-              type={"password"}
+              type="password"
               maxLength="4"
               inputMode="numerical"
             />

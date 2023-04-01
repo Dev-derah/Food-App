@@ -16,37 +16,17 @@
   flex-direction: column;
 }
 .exp-wrapper {
-  position: relative;
-  border: 1px solid #aaa;
   display: flex;
   width: 100%;
   line-height: 36px;
   font-size: 24px;
 }
 
-.exp-wrapper:after {
-  content: "/";
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  margin-left: -4px;
-  color: #00302e7f;
-  font-weight: lighter;
-}
-
 input.exp {
-  float: left;
-  border: 0;
-  width: 25%;
-  text-align: start;
-  outline: none;
-  appearance: none;
-  font-size: 14px;
+width: 50%;
 }
 
-.checkout__input,
-.exp-wrapper {
+.checkout__input {
   padding: 1rem;
   margin-bottom: 3rem;
   border: 1px solid rgb(243, 195, 149);
